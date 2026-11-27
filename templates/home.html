@@ -1,0 +1,116 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Adventure Awaits | Explore More{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <p class="eyebrow">THE WORLD IS YOUR PLAYGROUND</p>
+
+        <h1>Find your next<br><em>great adventure.</em></h1>
+
+        <p class="hero-copy">
+            Trade the everyday for extraordinary.
+            Discover wild places, new challenges and unforgettable stories.
+        </p>
+
+        <a class="button button-orange" href="{% url 'adventures' %}">
+            Explore adventures <span>↗</span>
+        </a>
+    </div>
+
+    <div class="hero-note">
+        <span class="hero-line"></span> MADE FOR THE WILD
+    </div>
+
+    <div class="hero-count">01 <span>/ 04</span></div>
+</section>
+
+
+<section class="intro section-wrap">
+
+    <div>
+        <p class="eyebrow dark-eyebrow">GO BEYOND THE ORDINARY</p>
+
+        <h2>Adventure is<br>out there. <em>Go find it.</em></h2>
+    </div>
+
+    <p class="intro-text">
+        From misty mountain trails to rushing rivers,
+        we bring you closer to the places that make you feel alive.
+        Your next story starts here.
+    </p>
+
+</section>
+
+
+<section class="feature-grid section-wrap">
+
+    <article class="feature-card feature-tall">
+
+        <img src="{% static 'images/mountains.svg' %}"
+             alt="Illustrated mountain trekking landscape">
+
+        <div class="feature-label">
+            <span>01 / LAND</span>
+            <h3>Mountain trekking</h3>
+            <p>Take the path less travelled.</p>
+        </div>
+
+    </article>
+
+
+    <article class="feature-card">
+
+        <img src="{% static 'images/rafting.svg' %}"
+             alt="Illustrated white water rafting">
+
+        <div class="feature-label">
+            <span>02 / WATER</span>
+            <h3>River rafting</h3>
+            <p>Ride the rush.</p>
+        </div>
+
+    </article>
+
+
+    <article class="feature-card">
+
+        <img src="{% static 'images/paragliding.svg' %}"
+             alt="Illustrated paragliding adventure">
+
+        <div class="feature-label">
+            <span>03 / AIR</span>
+            <h3>Paragliding</h3>
+            <p>See the world differently.</p>
+        </div>
+
+    </article>
+
+</section>
+
+
+<section class="dark-band">
+
+    <div class="section-wrap band-inner">
+
+        <div>
+            <p class="eyebrow">YOUR NEXT CHAPTER</p>
+
+            <h2>Less scrolling.<br><em>More exploring.</em></h2>
+        </div>
+
+        <a class="button button-outline" href="{% url 'contact' %}">
+            Let's plan your trip ↗
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

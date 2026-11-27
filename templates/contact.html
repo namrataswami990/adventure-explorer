@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact Us | Adventure Awaits{% endblock %}
+{% block content %}
+<section class="page-hero contact-hero">
+    <p class="eyebrow">LET'S MAKE IT HAPPEN</p><h1>Your next story<br>starts <em>with hello.</em></h1>
+    <p>Tell us what you're dreaming of. We'll help you find a way there.</p>
+</section>
+<section class="section-wrap contact-layout">
+    <div class="contact-details"><p class="eyebrow dark-eyebrow">GET IN TOUCH</p><h2>Have a question?<br><em>We're all ears.</em></h2>
+        <div class="contact-item"><span>EMAIL</span><p>hello@adventureawaits.example</p></div>
+        <div class="contact-item"><span>PHONE</span><p>+91 98765 43210</p></div>
+        <div class="contact-item"><span>LOCATION</span><p>Pune, Maharashtra, India</p></div>
+    </div>
+    <form class="contact-form" id="contactForm">
+        <label for="fullName">Your name</label><input id="fullName" name="fullName" type="text" placeholder="e.g. Alex Morgan" required>
+        <label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required>
+        <label for="interest">What are you interested in?</label>
+        <select id="interest" name="interest" required><option value="">Choose an adventure</option><option>Mountain trekking</option><option>River rafting</option><option>Paragliding</option><option>Something else</option></select>
+        <label for="message">Your message</label><textarea id="message" name="message" rows="4" placeholder="Tell us a little about your dream trip..." required></textarea>
+        <button class="button button-orange" type="submit">Send enquiry ↗</button>
+        <p class="form-message" id="formMessage" aria-live="polite"></p>
+        <small class="form-note">Demo form only — it does not send or save information yet.</small>
+    </form>
+</section>
+{% endblock %}
