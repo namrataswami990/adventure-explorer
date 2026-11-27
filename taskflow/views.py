@@ -1,4 +1,6 @@
-
+from rest_framework import viewsets
+from .models import Product
+from .serializers import ProductSerializer
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -21,3 +23,10 @@ def adventures(request):
 
 def courseDetails(request, coursedetails):
     return HttpResponse(coursedetails)
+
+
+
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
